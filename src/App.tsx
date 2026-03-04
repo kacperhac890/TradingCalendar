@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Plus, Trash2, DollarSign, TrendingUp, AlertTriangle, ListOrdered, Calculator, Check, BarChart3 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer } from 'recharts';
+import { Analytics } from '@vercel/analytics/react';
 import { TradingPlan, LevelData } from './types';
 
 const DEFAULT_PLAN: TradingPlan = {
@@ -400,6 +401,7 @@ export default function App() {
           </div>
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
